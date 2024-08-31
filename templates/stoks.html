@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    .stocks {
+
+    margin : 50px;
+    border: 1px;
+    }
+
+</head>
+
+<body>
+    <h1>今年以來主要股價漲幅</h1>
+    {% if sotocks %}
+    {% for data in stocks %}
+    <div class="stocks">{{data[0]}},{{data[1]}}</div>
+    {% endfor %}
+
+    {% else %}
+    <h2 style="color:red">系統忙碌中, 請稍後在試!</h2>
+    {% endif %}
+    <a href="/">回首頁</a>
+</body>
+
+</html>
